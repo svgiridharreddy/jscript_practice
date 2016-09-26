@@ -1,0 +1,23 @@
+<html>
+<head> 
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		function fibo(n){
+			var i;
+			var fib = [];
+			fib[0]= 0;
+			fib[1]=1;
+			for(var i = 2; i<=n;i++){
+				fib[i] = fib[i-1] + fib[i-2];
+			}
+			return fib;
+		}
+			console.log(fibo(100));
+	</script>
+</body>
+
+</html>

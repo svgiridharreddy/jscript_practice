@@ -1,0 +1,126 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		function reverseString(str) {
+			var newStringArray = [];
+			for(var i=str.length-1,j=0;i>=0;i--,j++) {	
+				newStringArray[j] = str[i];
+			}
+			return newStringArray.join('');
+		}
+		console.log(reverseString("giridhar"));	
+
+		function rM1(str) {
+			return str.split("").reverse().join('');
+		}
+
+		function rM2(str) {
+			var newString = [];
+			for(var i=str.length-1;i>=0;i--){
+				newString += str[i];
+			}
+			return newString;
+		}
+		console.log(rM2("gowtham"));
+
+		function rm3(str) {
+			newStringArray = [];
+			for(var i=str.length-1,j=0;i>=0;i--,j++){
+				newStringArray[j] = str[i];
+			}
+			return newStringArray.join("");
+		}
+		console.log(rm3("mounika"));
+		function recursive_reverse(str) {
+			return (str==="")? "" : recursive_reverse(str.substr(1)) + str.charAt(0);
+										//'ounika'  + 'm'
+										//'unika'   + 'o'
+										//'nika'    + 'u'
+										//'ika'     + 'n'
+										//....
+										//''        + 'a'
+		}
+		console.log(recursive_reverse("sreedevi")) 
+
+		function reverseSentence(sentence) {
+			var words = sentence.split(" ");
+			var newSentence=[];
+			console.log(words);
+			for(var i= 0;i<=words.length-1;i++){
+				var newString = "";
+				newString += words[i];
+				console.log(newString);
+				for(j=newString.length-1;j>=0;j--){
+					var reversedString = "";
+					reversedString += newString[j];
+					console.log(reversedString);
+				}	
+			}
+			newSentence.push(reversedString);
+			console.log(newSentence.join(""));
+			
+			
+			
+		}
+		reverseSentence("this is javascript world");
+
+		function factorial(n) {
+			if(n==0 | n==1) {
+				return 1;
+			} 
+			else{
+				return n*factorial(n-1);
+			}
+			
+		}
+		console.log(factorial(10));
+
+		function longestWord(sentence){
+			var words = sentence.split(" ");
+			var longWordLength = 0;
+			var longestWord = "";
+			for(var i=0;i<words.length;i++){
+				if(words[i].length > longWordLength){
+					longWordLength = words[i].length;
+					longestWord = words[i];
+					// if(words[i].length == longWordLength) {
+					// 	longestWord=words[i];
+					// 	console.log("the longest word is: "+longestWord);
+					// }
+				}
+
+			}
+
+			return (longestWord + " with length " +longWordLength);
+		}
+		console.log(longestWord("encapsulation is very powerfull"));
+
+		function findLongestWord(str) {
+			var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
+			return console.log(longestWord[0]);
+		}
+		findLongestWord("The quick brown fox jumped over the lazy dog");
+
+		function fn1()
+		{
+			return {
+				name: "hello"
+			};
+		}
+
+		console.log(fn1());
+
+		function foo2()
+		{
+			return
+			{
+				name: "world"
+			};
+		}
+		console.log(foo2());
+	</script>
+	
+</body>
+

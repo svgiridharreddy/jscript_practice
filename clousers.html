@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+	<script type="text/javascript">
+		var x = 0;
+		var timer1;
+		var timer2;
+		var counter=0;
+		function setUp(){
+			createCanvas(200,200);
+			timer1 = document.createElement('timer1');
+			timer2 = document.createElement('timer2');
+			setInterval(timeIt,200);
+		}
+		function timeIt(){
+			timer1.html(counter);
+			console.log(timer1);
+			counter++;
+		}
+function add(x){
+			var y = 10;
+			return function(z){ 
+				console.log(x)
+				console.log(z);
+				return (x+y+z);}
+		}
+		var result = add(20);
+		console.log(result(30));
+	</script>
+</body>
+</html>
